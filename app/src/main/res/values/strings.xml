@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">WebView Browser - Kotlin</string>
+    <string name="go">Ir</string>
+    <string name="searchtext">Introduce o busca un sitio web</string>
+</resources>

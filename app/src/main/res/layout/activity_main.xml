@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:contentInsetStart="0dp"
+            android:contentInsetLeft="0dp"
+            android:elevation="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp">
+
+        <LinearLayout
+                android:id="@+id/search_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@android:color/white"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            <EditText
+                    android:id="@+id/etSearchQuery"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:background="@android:color/white"
+                    android:gravity="top|start"
+                    android:hint="@string/searchtext"
+                    android:inputType="textNoSuggestions"
+                    android:maxLines="1"
+                    android:padding="10dp"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:textSize="13sp"
+                    tools:ignore="Autofill" />
+
+            <Button
+                    android:id="@+id/bGo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/white"
+                    android:gravity="center"
+                    android:text="@string/go"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15sp" />
+
+        </LinearLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ProgressBar
+            android:id="@+id/progressbar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/colorPrimary"
+            android:progressDrawable="@drawable/custom_progress"
+            android:visibility="gone" />
+
+    <WebView
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7" />
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="0dp">
+
+        <ImageButton
+                android:id="@+id/ibGoBack"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="0dp"
+                android:layout_weight="1"
+                android:background="?android:selectableItemBackground"
+                android:tint="@android:color/white"
+                android:src="@drawable/ic_arrow_back_black_24dp"
+                tools:ignore="ContentDescription" />
+
+
+        <ImageButton
+                android:id="@+id/ibGoForward"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?android:selectableItemBackground"
+                android:tint="@android:color/white"
+                android:src="@drawable/ic_arrow_forward_black_24dp"
+                tools:ignore="ContentDescription" />
+
+        <ImageButton
+                android:id="@+id/ibGoHome"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?android:selectableItemBackground"
+                android:tint="@android:color/white"
+                android:src="@drawable/ic_home_black_24dp"
+                tools:ignore="ContentDescription" />
+
+        <ImageButton
+                android:id="@+id/ibRefresh"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?android:selectableItemBackground"
+                android:tint="@android:color/white"
+                android:src="@drawable/ic_refresh_black_24dp"
+                tools:ignore="ContentDescription" />
+
+        <ImageButton
+                android:id="@+id/ibShare"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?android:selectableItemBackground"
+                android:tint="@android:color/white"
+                android:src="@drawable/ic_share_black_24dp"
+                tools:ignore="ContentDescription" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
